@@ -1,12 +1,81 @@
-HTML
 <!DOCTYPE html>
-<html>
-<head>
-    <title>My Project</title>
-</head>
-<body>
-    <h1>My JavaScript Project</h1>
 
-    <script src="task2.js"></script>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Results System</title>
+
+<style>
+
+body {
+
+  font-family: Arial;
+
+  background: #f2f4f8;
+
+  padding: 20px;
+
+}
+
+h1 {
+
+  color: #234;
+
+  text-align: center;
+
+}
+
+pre {
+
+  background: white;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  white-space: pre-wrap;
+
+  overflow-wrap: anywhere;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Student Results System</h1>
+
+<pre id="output"></pre>
+
+<script>
+
+const output = document.getElementById("output");
+
+console.log = (...args) => {
+
+  output.textContent += args.map(item =>
+
+    typeof item === "object"
+
+      ? JSON.stringify(item, null, 2)
+
+      : String(item)
+
+  ).join(" ") + "\n";
+
+};
+
+</script>
+
+<script src="task2.js"></script>
+
 </body>
+
 </html>
